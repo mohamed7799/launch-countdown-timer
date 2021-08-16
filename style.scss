@@ -1,0 +1,117 @@
+//colors
+$Grayish-blue: hsl(237, 18%, 59%);
+$Soft-red: hsl(345, 95%, 68%);
+
+$White: hsl(0, 0%, 100%);
+$Dark-desaturated-blue: hsl(236, 21%, 26%);
+$Very-dark-blue: hsl(235, 16%, 14%);
+$black: hsl(234, 17%, 12%);
+
+//reset
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 14px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Red Hat Text";
+  background-color: #272233;
+  background-image: url("./imgs/pattern-hills.svg"), url("./imgs/bg-stars.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+//general styles
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+}
+
+main {
+  margin-top: 10rem;
+  text-align: center;
+}
+
+//header
+
+h1 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: $White;
+  margin: 4rem 0rem;
+  font-size: 1.5rem;
+}
+
+//countdown
+
+.countdown {
+  max-width: 450px;
+  margin: auto;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown__item {
+  min-width: 50px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  & h2 {
+    background-color: $Dark-desaturated-blue;
+    border-radius: 5px;
+    font-size: 2rem;
+    color: $Soft-red;
+    padding: 1rem 0.5rem;
+  }
+  & h3 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 100;
+    color: $Grayish-blue;
+    font-size: 0.7rem;
+  }
+}
+
+//footer
+
+footer {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-content: center;
+  & i {
+    cursor: pointer;
+    color: $Grayish-blue;
+    font-size: 2rem;
+    &:hover {
+      color: $Soft-red;
+    }
+  }
+}
+
+//media query
+
+@media screen and (min-width: 1000px) {
+  main {
+    margin-top: 4rem;
+  }
+}
